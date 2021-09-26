@@ -18,12 +18,26 @@
         body {
             overflow-x: hidden;
         }
+        .eng .sp {
+            display: none;
+        }
+
+        .sp .eng {
+            display: none;
+        }
+
     </style>
 </head>
-<body>
+<body class="eng" id="bod">
     <nav class="navbar bg-dark justify-content-between">
         <div class="text-white mx-3">
             <span><i class="bi bi-telephone" style="color: white;"></i> +34 952 78 61 61</span>
+        </div>
+        <div>
+            <select class="form-select form-select-lg mb-3" id="langselect" aria-label=".form-select-lg example" onchange="language()">
+                <option selected value="1">English</option>
+                <option value="2">Spanish</option>
+              </select>
         </div>
         
         <div class="mx-3">
@@ -36,10 +50,12 @@
         <div class="container-fluid justify-content-sm-center justify-content-between">
             <ul class="navbar-nav d-none d-sm-flex">
                 <li class="nav-item">
-                  <a class="nav-link fw-light mx-2 me-md-5" aria-current="page" href="#" style="font-size: 1.5rem;">Home</a>
+                  <a class="nav-link fw-light mx-2 me-md-5 eng" aria-current="page" href="#" style="font-size: 1.5rem;">Home</a>
+                  <a class="nav-link fw-light mx-2 me-md-5 sp" aria-current="page" href="#" style="font-size: 1.5rem;">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fw-light mx-2 me-md-5" aria-current="page" href="#services"style="font-size: 1.5rem;">Services</a>
+                  <a class="nav-link fw-light mx-2 me-md-5 eng" aria-current="page" href="#services"style="font-size: 1.5rem;">Services</a>
+                  <a class="nav-link fw-light mx-2 me-md-5 sp" aria-current="page" href="#services"style="font-size: 1.5rem;">Servicios</a>
                 </li>
             </ul>
 
@@ -49,10 +65,12 @@
 
             <ul class="navbar-nav d-none d-sm-flex">
                 <li class="nav-item">
-                   <a class="nav-link fw-light mx-2 ms-md-5" aria-current="page" href="#about"style="font-size: 1.5rem;">About</a>
+                   <a class="nav-link fw-light mx-2 ms-md-5 eng" aria-current="page" href="#about"style="font-size: 1.5rem;">About</a>
+                   <a class="nav-link fw-light mx-2 ms-md-5 sp" aria-current="page" href="#about"style="font-size: 1.5rem;">Nuestro Salón</a>
                 </li>
                  <li class="nav-item">
-                      <a class="nav-link fw-light mx-2 ms-md-5" aria-current="page" href="#"style="font-size: 1.5rem;">Contact</a>
+                      <a class="nav-link fw-light mx-2 ms-md-5 eng" aria-current="page" href="#"style="font-size: 1.5rem;">Contact</a>
+                      <a class="nav-link fw-light mx-2 ms-md-5 sp" aria-current="page" href="#"style="font-size: 1.5rem;">Contacto</a>
                  </li>
             </ul>
             <a class="navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -71,16 +89,20 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link" style="font-size: 1.5rem;" aria-current="page" href="#">Home</a>
+                  <a class="nav-link eng" style="font-size: 1.5rem;" aria-current="page" href="#">Home</a>
+                  <a class="nav-link sp" style="font-size: 1.5rem;" aria-current="page" href="#">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="font-size: 1.5rem;" href="#services">Services</a>
+                    <a class="nav-link eng" style="font-size: 1.5rem;" href="#services">Services</a>
+                    <a class="nav-link sp" style="font-size: 1.5rem;" href="#services">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="font-size: 1.5rem;" href="#about">About</a>
+                    <a class="nav-link eng" style="font-size: 1.5rem;" href="#about">About</a>
+                    <a class="nav-link sp" style="font-size: 1.5rem;" href="#about">Nuestro Salón</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="font-size: 1.5rem;" href="#">Contact</a>
+                    <a class="nav-link eng" style="font-size: 1.5rem;" href="#">Contact</a>
+                    <a class="nav-link sp" style="font-size: 1.5rem;" href="#">Contacto</a>
                 </li>
                 
               </ul>
@@ -120,18 +142,23 @@
     </div>
 
     <div class="container-xl text-center mb-5">
-        <div class="display-4">Your hair, your way</div>
-        <div class="p lead text-muted mb-3">Schedule an appointment online or by phone today</div>
+        <div class="display-4 eng">Your hair, your way</div>
+        <div class="display-4 sp">Your hair, your way</div>
+        <div class="p lead text-muted mb-3 eng">Schedule an appointment today</div>
+        <div class="p lead text-muted mb-3 sp">Consulta disponibilidad</div>
         <div class="row text-start row-cols-1 row-cols-sm-2 row-cols-md-4 g-1">
             <div class="col">
                 <div class="mx-auto card h-100" style="max-width: 95%;">
                     <img src="assets/p1.jpg" class="card-img-top" style="height: 17rem; object-fit: cover;">
                     <div class="card-body shadow-sm">
-                        <h5 class="card-title  ">Color</h5>
-                        <h6 class="card-subtitle  text-muted fw-light">From $50</h6>
-                        <p class="card-text ">Update your look with a fresh new color or refresh your current one</p>
+                        <h5 class="card-title eng ">Highlights</h5>
+                        <h5 class="card-title sp ">Color</h5>
+                        <h6 class="card-subtitle  text-muted fw-light eng">From €30</h6>
+                        <h6 class="card-subtitle  text-muted fw-light sp">Desde €30</h6>
+                        <p class="card-text eng">We use the latest techniques to create a personalized color</p>
+                        <p class="card-text sp">Creamos para tí un color con las últimas técnicas acorde a tu imagen</p>
                     </div>
-                    <div class="card-footer bg-warning fw-bold"><i class="bi bi-emoji-heart-eyes"></i> Popular</div>
+                    <div class="card-footer bg-warning fw-bold"><i class="bi bi-emoji-heart-eyes"></i> Populár</div>
                 </div>
             </div>
             
@@ -139,9 +166,11 @@
                 <div class="card mx-auto h-100" style="max-width: 95%;">
                     <img src="assets/p3.jpg" class="card-img-top" style="height: 17rem; object-fit: cover;">
                     <div class="card-body shadow-sm">
-                        <h5 class="card-title">Chemical Straightening</h5>
-                        <h6 class="card-subtitle mb-2 text-muted fw-light">From $50</h6>
-                        <p class="card-text">GOA products and services for straightening your hair are offered</p>
+                        <h5 class="card-title">GOA Organics</h5>
+                        <h6 class="card-subtitle mb-2 text-muted fw-light eng">Pricing varies</h6>
+                        <h6 class="card-subtitle mb-2 text-muted fw-light sp">A consultar</h6>
+                        <p class="card-text eng">Vegan products suited to every style</p>
+                        <p class="card-text sp">Tratamientos veganos que se adaptan a tus necesidades</p>
                     </div>
                 </div>
             </div>
@@ -150,9 +179,11 @@
                 <div class="mx-auto card h-100" style="max-width: 95%;">
                     <img src="assets/p2.jpg" class="card-img-top" style="height: 17rem; object-fit: cover;">
                     <div class="card-body shadow-sm">
-                        <h5 class="card-title">For Events</h5>
-                        <h6 class="card-subtitle mb-2 text-muted fw-light">From $50</h6>
-                        <p class="card-text">Make your next wedding, party or night out a memorable one with our styling services</p>
+                        <h5 class="card-title">Olaplex</h5>
+                        <h6 class="card-subtitle mb-2 text-muted fw-light eng">Pricing varies</h6>
+                        <h6 class="card-subtitle mb-2 text-muted fw-light sp">A consultar</h6>
+                        <p class="card-text eng">Products to rejuviante your hair</p>
+                        <p class="card-text sp">Tratamientos para la regeración del cabello</p>
                     </div>
                 </div>
             </div>
@@ -161,65 +192,85 @@
                 <div class="mx-auto card h-100" style="max-width: 95%;">
                     <img src="assets/p4.jpg" class="card-img-top" style="height: 17rem; object-fit: cover;">
                     <div class="card-body shadow-sm">
-                        <h5 class="card-title">Lashes and Brows</h5>
-                        <h6 class="card-subtitle mb-2 text-muted fw-light">From $50</h6>
-                        <p class="card-text">Look no further when searching for brow and lash upkeep</p>
+                        <h5 class="card-title eng">Events</h5>
+                        <h5 class="card-title sp">Eventos</h5>
+                        <h6 class="card-subtitle mb-2 text-muted fw-light eng">Pricing varies</h6>
+                        <h6 class="card-subtitle mb-2 text-muted fw-light sp">A consultar</h6>
+                        <p class="card-text eng">Make your next wedding, party or night out a memorable one with our styling services</p>
+                        <p class="card-text sp">Peinados personalizados para occasiones especiales</p>
                     </div>
                 </div>
             </div>
             
         </div>
-        <h3 class="mt-4 display-5">You're just one click away.. </h3>
-        <button class="btn btn-outline-primary mt-2 mb-2 btn-lg">Contact Us</button>
+        <h3 class="mt-4 display-5 eng">You're just one click away</h3>
+        <h3 class="mt-4 display-5 sp">Contactar con nosotros en un sólo click</h3>
+        <button class="btn btn-outline-primary mt-2 mb-2 btn-lg eng">Contact Us</button>
+        <button class="btn btn-outline-primary mt-2 mb-2 btn-lg sp">Contactar</button>
         <hr/>
     </div>
     
     <section id="services">
         <div class="container-xl rounded-3 text-center p-3 mb-5" style="background-color: rgba(255, 179, 191, 0.521);">
-            <div class="display-3">Services</div>
-            <div class="p lead text-muted mb-3">Additionally we offer the following services</div>
+            <div class="display-3 eng">Services</div>
+            <div class="display-3 sp">Servicios</div>
+            <div class="p lead text-muted mb-3 eng">We offer the following services</div>
+            <div class="p lead text-muted mb-3 sp">Ofrecemos los siguentes servicios</div>
             <div class="display-5 text-center mb-2 p-2 rounded-3 ">
-                <div class=" col-4 col-md-2 mx-auto rounded-pill p-1">
-                    Cut <i class="bi bi-scissors"></i>
+                <div class=" col-4 col-md-2 mx-auto rounded-pill p-1 eng">
+                    Styling <i class="bi bi-scissors"></i>
+                </div>
+                <div class=" col-4 col-md-2 mx-auto rounded-pill p-1 sp">
+                    Estilo <i class="bi bi-scissors"></i>
                 </div>
                 
             </div>
             <div class="row row-cols-md-2 row-cols-1 mb-5">
                 <div class="col text-center justify-content-center">
                     <div>
-                        <h3>Blow Dry <span class="text-muted fw-light ">- €15 - €30</span></h3>
-                        <div class="text-muted mb-3">Get your hair dried professionally</div>
+                        <h3 class="eng">Blow Dry <span class="text-muted fw-light eng">- €15 - €30</span></h3>
+                        <h3 class="sp">Peinado <span class="text-muted fw-light sp">- €15 - €30</span></h3>
+                        <div class="text-muted mb-3 eng">Personalized Styling</div>
+                        <div class="text-muted mb-3 sp">Peinado personalizado</div>
                     </div>
                     <div>
-                        <h3>Hair Up <span class="text-muted fw-light ">- from €40</span></h3>
-                        <div class="text-muted mb-3">Styled professionally for any occasion</div>
+                        <h3 class="eng">Hair Up <span class="text-muted fw-light eng">- from €40</span></h3>
+                        <h3 class="sp">Recogidos <span class="text-muted fw-light sp">- desde €40</span></h3>
+                        <div class="text-muted mb-3 eng">Styled professionally for any occasion</div>
+                        <div class="text-muted mb-3 sp">Perfecto para occasiones especiales</div>
                     </div>
                     <div>
-                        <h3>Womens Cut <span class="text-muted fw-light ">- €18</span></h3>
-                        <div class="text-muted mb-3">A haircut to your preference</div>
+                        <h3 class="eng">Womens Cut <span class="text-muted fw-light eng">- €18</span></h3>
+                        <h3 class="sp">Corte mujer <span class="text-muted fw-light sp">- €18</span></h3>
+                        <div class="text-muted mb-3 eng">A simple haircut for women</div>
+                        <div class="text-muted mb-3 sp">Corte de pelo simple para mujeres</div>
                     </div>
                     
                 </div>
                 
                 <div class="col text-center">
+                    
                     <div>
-                        <h3>Profile Cut <span class="text-muted fw-light ">- €10</span></h3>
-                        <div class="text-muted mb-3">Get a refreshed look</div>
+                        <h3 class="eng">Mens cut <span class="text-muted fw-light eng">- €15</span></h3>
+                        <h3 class="sp">Corte caballero <span class="text-muted fw-light sp">- €15</span></h3>
+                        <div class="text-muted mb-3 eng">A simple haircut for men</div>
+                        <div class="text-muted mb-3 sp">Corte de pelo simple para hombres</div>
                     </div>
                     <div>
-                        <h3>Mens Cut <span class="text-muted fw-light ">- €15</span></h3>
-                        <div class="text-muted mb-3">A haircut to your preference</div>
-                    </div>
-                    <div>
-                        <h3>Childrens Cut <span class="text-muted fw-light ">- €12</span></h3>
-                        <div class="text-muted mb-3">A simple haircut</div>
+                        <h3 class="eng">Childrens cut <span class="text-muted fw-light eng">- €12</span></h3>
+                        <h3 class="sp">Corte niño <span class="text-muted fw-light sp">- €12</span></h3>
+                        <div class="text-muted mb-3 eng">A simple haircut for children</div>
+                        <div class="text-muted mb-3 sp">Corte de pelo simple para niños</div>
                     </div>
                     
                 </div>
                     
             </div><hr class="d-md-none"/>
             <div class="display-5 text-center mb-2 p-2 rounded-3 ">
-                <div class="col-5 col-md-2 mx-auto rounded-pill p-1">
+                <div class="col-5 col-md-2 mx-auto rounded-pill p-1 eng">
+                    Colour <i class="bi bi-rainbow" style="color: red;"></i>
+                </div>
+                <div class="col-5 col-md-2 mx-auto rounded-pill p-1 sp">
                     Color <i class="bi bi-rainbow" style="color: red;"></i>
                 </div>
                 
@@ -227,103 +278,135 @@
             <div class="row row-cols-md-2 row-cols-1 mb-5">
                 <div class="col  text-center justify-content-center">
                     <div>
-                        <h3>Roots <span class="text-muted fw-light ">- €23</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
+                        <h3 class="eng">Roots <span class="text-muted fw-light eng">- €23</span></h3>
+                        <h3 class="sp">Raíz <span class="text-muted fw-light sp">- €23</span></h3>
+                        <div class="text-muted mb-3 eng">Root colouring</div>
+                        <div class="text-muted mb-3 sp">Coloración de raíces</div>
                     </div>
                     <div>
-                        <h3>Medium <span class="text-muted fw-light ">- €28</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
+                        <h3 class="eng">Medium <span class="text-muted fw-light eng">- €28</span></h3>
+                        <h3 class="sp">Medio <span class="text-muted fw-light sp">- €28</span></h3>
+                        <div class="text-muted mb-3 eng">Partial colouring </div>
+                        <div class="text-muted mb-3 sp">Coloración parcial</div>
                     </div>
                     <div>
-                        <h3>Long <span class="text-muted fw-light ">- €32</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
+                        <h3 class="eng">Long <span class="text-muted fw-light eng">- €32</span></h3>
+                        <h3 class="sp">Largo <span class="text-muted fw-light sp">- €32</span></h3>
+                        <div class="text-muted mb-3 eng">Full colouring </div>
+                        <div class="text-muted mb-3 sp">Coloración opleta</div>
                     </div>
+
+                    <div>
+                        <h3 class="eng">Contouring <span class="text-muted fw-light eng">- €23</span></h3>
+                        <h3 class="sp">Contorno <span class="text-muted fw-light sp">- €23</span></h3>
+                        <div class="text-muted mb-3 eng">Lightening the ends of your hair</div>
+                        <div class="text-muted mb-3 sp">Iluminación de zona media y puntas</div>
+                    </div>
+                    <div>
+                        <h3 class="eng">Half Highlights <span class="text-muted fw-light eng">- €28</span></h3>
+                        <h3 class="sp">Medias mechas <span class="text-muted fw-light sp">- €28</span></h3>
+                        <div class="text-muted mb-3 eng">Highlighting the ends of your hair </div>
+                        <div class="text-muted mb-3 sp">Mechas de medias a puntas</div>
+                    </div>
+                    
                     
                 </div>
                 
                 <div class="col text-center">
                     <div>
-                        <h3>Tone <span class="text-muted fw-light ">- €15</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
+                        <h3 class="eng">Balayage <span class="text-muted fw-light eng">- €15</span></h3>
+                        <h3 class="sp">Balayage <span class="text-muted fw-light sp">- €15</span></h3>
+                        <div class="text-muted mb-3 eng">A french technique  to create a natural graduated effect</div>
+                        <div class="text-muted mb-3 sp">Técnica de coloración francesa para iluminar el cabello de la forma más natural</div>
                     </div>
                     <div>
-                        <h3>Root Bleach <span class="text-muted fw-light ">- €30</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
+                        <h3 class="eng">Root bleach <span class="text-muted fw-light eng">- €30</span></h3>
+                        <h3 class="sp">Decoloración de raices <span class="text-muted fw-light sp">- €30</span></h3>
+                        <div class="text-muted mb-3 eng">Root colouring </div>
+                        <div class="text-muted mb-3 sp">Matización de pelo</div>
                     </div>
                     <div>
-                        <h3>Ecoplex <span class="text-muted fw-light ">- €15</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
+                        <h3 class="eng">Olaplex <span class="text-muted fw-light eng">- €15</span></h3>
+                        <h3 class="sp">Olaplex <span class="text-muted fw-light sp">- €15</span></h3>
+                        <div class="text-muted mb-3 eng">A treatment to maintain the health of your hair during the process of colouring</div>
+                        <div class="text-muted mb-3 sp">Tratamiento para cuidar la salud de tu cabello en el proceso de coloración</div>
                     </div>
-                    
+
+                    <div>
+                        <h3 class="eng">Babylights <span class="text-muted fw-light eng">- €23</span></h3>
+                        <h3 class="sp">Babylights <span class="text-muted fw-light sp">- €23</span></h3>
+                        <div class="text-muted mb-3 eng">Natural looking thin highlights</div>
+                        <div class="text-muted mb-3 sp">Reflejos con efecto natural</div>
+                    </div>
+                    <div>
+                        <h3 class="eng">Full Highlights <span class="text-muted fw-light eng">- €32</span></h3>
+                        <h3 class="sp">Mechas <span class="text-muted fw-light sp">- €32</span></h3>
+                        <div class="text-muted mb-3 eng">Complete Hightlights </div>
+                        <div class="text-muted mb-3 sp">Mechas completas</div>
+                    </div>
                 </div>
                 
-                    
             </div><hr class="d-md-none"/>
             <div class="display-5 text-center mb-2 p-2 rounded-3 ">
-                <div class="col-6 col-md-4 mx-auto rounded-pill p-1">
-                    Highlights <i class="bi bi-palette2"></i>
+                <div class="col-6 col-md-3 mx-auto rounded-pill p-1 eng">
+                    Treatments <i class="bi bi-rainbow" style="color: red;"></i>
                 </div>
+                <div class="fs-5 text-muted eng">Prices depend on the length and quantity of hair</div>
+                <div class="col-6 col-md-3 mx-auto rounded-pill p-1 sp">
+                    Tratimientos <i class="bi bi-rainbow" style="color: red;"></i>
+                </div>
+                <div class="fs-5 text-muted sp">Dependiendo de la cantidad y la longitud del cabello, el precio final de los servicios pueden variar</div>
             </div>
-            <div class="row row-cols-md-2 row-cols-1 mb-5">
-                <div class="col text-center">
+            <div class="row row-cols-md-2 row-cols-1 mb-2">
+                <div class="col text-center justify-content-center">
                     <div>
-                        <h3>Contouring <span class="text-muted fw-light ">- €30</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
-                    </div>
-                    <div>
-                        <h3>Half Highlights <span class="text-muted fw-light ">- €40</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
-                    </div>
-                    <div>
-                        <h3>Full Highlights <span class="text-muted fw-light ">- €65</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
-                    </div>
-                    
+                        <h3 class="eng">Sublime 10.31 <span class="text-muted fw-light eng">- €23</span></h3>
+                        <h3 class="sp">Sublime 10.31 <span class="text-muted fw-light sp">- €23</span></h3>
+                        <div class="text-muted mb-3 eng">Vegan treatment to restore the shine to your hair</div>
+                        <div class="text-muted mb-3 sp">Tratamiento vegano que regenera por completo el cabello aportando brillo</div>
+                    </div>   
                 </div>
-                <div class="col text-center">
-                    <div>
-                        <h3>Balayage <span class="text-muted fw-light ">- €65</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
-                    </div>
-                    <div>
-                        <h3>Babylights <span class="text-muted fw-light ">- €65</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
-                    </div>
-                </div>
-            </div>
-            <hr class="d-md-none"/>
+                    <div class="col text-center justify-content-center">
 
-            <div class="display-5 text-center mb-2 p-2 rounded-3 ">
-                <div class="col-6 col-md-4 mx-auto rounded-pill p-1">
-                    Treatments <i class="bi bi-droplet"></i></i>
+                        <div>
+                            <h3 class="eng">Super Service Olaplex <span class="text-muted fw-light eng">- €23</span></h3>
+                            <h3 class="sp">Super Service Olaplex <span class="text-muted fw-light sp">- €23</span></h3>
+                            <div class="text-muted mb-3 eng">Helps to reviatalize the health and strength of your hair</div>
+                            <div class="text-muted mb-3 sp">Perfecto para reconstruir la fuerza, estructura e integridad de tu cabello</div>
+                        </div>
+                    </div>
+                
+            </div>
+            <div class="row-cols-1 mb-5 mx-5">
+                <div class="col text-center justify-content-center">
+                    <div>
+                        <h3 class="eng">Keratin Infusion <span class="text-muted fw-light eng">- €23</span></h3>
+                        <h3 class="sp">Keratin Infusion <span class="text-muted fw-light sp">- €23</span></h3>
+                        <div class="text-muted mb-3 eng">Straightening 100% naturally, free of silicones, kerosenes, petrolatum and mineral oils. Its formula, cruelty free and vegan, takes care of your hair giving it a sublime shine and a perfect straightening.</div>
+                        <div class="text-muted mb-3 sp">Alisado 100% natural, libre de siliconas, parafinas, petrolatos y aceites minerales. Su fórmula, cruelty free y vegana, cuida tu cabello aportándole un brillo sublime y un alisado perfecto</div>
+                    </div>   
+                     
                 </div>
             </div>
-            <div class="row row-cols-md-2 row-cols-1 mb-5">
-                <div class="col text-center">
-                    <div>
-                        <h3>Sublime IO <span class="text-muted fw-light ">- from €100</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
-                    </div>
-                    <div>
-                        <h3>Kertain Infusion <span class="text-muted fw-light ">- from €250</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
-                    </div>
-                    
-                </div>
-                <div class="col text-center">
-                    <div>
-                        <h3>Conditioner <span class="text-muted fw-light ">- €5</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
-                    </div>
-                    <div>
-                        <h3>Mask <span class="text-muted fw-light ">- €7</span></h3>
-                        <div class="text-muted mb-3">A brief description of this service</div>
-                    </div>
-                </div>
+        <hr class="d-md-none"/>
+        <div class="display-5 text-center mb-2 p-2 rounded-3 ">
+            <div class="col-10 col-md-8 mx-auto rounded-pill p-1 eng">
+                Hair Extensions <i class="bi bi-rainbow" style="color: red;"></i>
+                <div class="fs-3 text-muted eng">Add volume and length to your hair with the best hair extensions made entirely of natural and ethical hair from Great Lengths</div>
+                <div class="fs-5 text-muted mt-2 eng">Pricing varies</div>
             </div>
-            
+            <div class="col-10 col-md-8 mx-auto rounded-pill p-1 sp">
+                Extensiones de cabello <i class="bi bi-rainbow" style="color: red;"></i>
+                <div class="fs-3 text-muted sp">Aporta volumen y longitud a tu cabello con las mejores extensiones hechas completamente de cabello natural y ético Great Lengths</div>
+                <div class="fs-5 text-muted mt-2 sp">A consultar</div>
+            </div>
             
         </div>
+
+            
+        </div>
+
+        
     </section>
     <section id="about">
         <div class="container-xl">
@@ -428,7 +511,16 @@
         </div>
     </section>
     
-    
+    <script>
+        function language() {
+            if(document.getElementById("langselect").selectedIndex == 0) {
+                document.getElementById("bod").className = "eng"
+            } else {
+                document.getElementById("bod").className = "sp"
+            }   
+        }
+        
+    </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>
