@@ -6,15 +6,18 @@
     <title>Jara's Beauty</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="icon" 
-      type="image/png" 
-      href="assets/jara-02.png">
+    <link rel="icon" type="image/png" href="assets/jara-02.png">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
         @media (max-width: 767px) {
             #logo {
                 max-width: 150px !important;
             }
         }
+        
         body {
             overflow-x: hidden;
         }
@@ -25,7 +28,25 @@
         .sp .eng {
             display: none;
         }
-
+        * {
+            font-family: "Quicksand", sans-serif;
+        }
+        .c1 {
+            background-color: #EAD8D8;
+        }
+        .c2 {
+            background-color: #D2A8AE;
+        }
+        .c3 {
+            background-color: #94656D;
+        }
+        .c4 {
+            background-color: #E1C6B6;
+        }
+        .c5 {
+            background-color: #CCA593;
+        }
+        
     </style>
 </head>
 <body class="eng" id="bod">
@@ -46,7 +67,7 @@
             <i class="bi bi-twitter mx-1" style="font-size: 1.5rem; color: white;"></i>
         </div>
     </nav>
-    <nav class="navbar navbar-light navbar-expand-sm " style="background-color: rgba(255, 179, 191, 0.521);">
+    <nav class="navbar navbar-light navbar-expand-sm c2">
         <div class="container-fluid justify-content-sm-center justify-content-between">
             <ul class="navbar-nav d-none d-sm-flex">
                 <li class="nav-item">
@@ -110,11 +131,9 @@
           </div>
         </div>
       </nav>
-      <div class="container">
 
-     
+    <div class="container">
       <div id="pageTopCarousel" class="carousel carousel-dark slide mt-3" data-bs-ride="carousel">
-        
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="assets/interior1.jpg" class="d-block w-100 img-fluid mx-auto rounded-1" style="max-height: 45rem; object-fit: cover;" alt="...">
@@ -199,69 +218,192 @@
                 </div>
             </div>
         </div>
+
         <h3 class="mt-4 display-5 eng">You're just one click away</h3>
         <h3 class="mt-4 display-5 sp">Contactar con nosotros en un sólo click</h3>
         <a href="#about" class="btn btn-outline-primary mt-2 mb-2 btn-lg eng">Contact Us</a>
         <a href="#about" class="btn btn-outline-primary mt-2 mb-2 btn-lg sp">Contactar</a>
         <hr/>
+
     </div>
     
     <section id="services">
-        <div class="container-xl rounded-3 text-center p-3 mb-5" style="background-color: rgba(255, 179, 191, 0.521);">
+        <div class="container-xl rounded-3 text-center p-3 mb-5 c1">
             <div class="display-3 eng">Services</div>
             <div class="display-3 sp">Servicios</div>
             <div class="p lead text-muted mb-3 eng">We offer the following services</div>
             <div class="p lead text-muted mb-3 sp">Ofrecemos los siguentes servicios</div>
-            <div class="display-5 text-center mb-2 p-2 rounded-3 ">
-                <div class=" col-4 col-md-2 mx-auto rounded-pill p-1 eng">
-                    Styling <i class="bi bi-scissors"></i>
+            
+
+            
+
+                <div class="card border-0 col-md-8 mx-auto mb-4" >
+                    <div class="card-header c1 border-bottom border-light">
+                        <h3 class="text-start fs-2 eng">Styling <i class="bi bi-scissors"></i></h3>
+                        <h3 class="text-start sp">Estilo <i class="bi bi-scissors"></i></h3>
+                    </div>
+                    <div class="card-body c1" >
+                        <div class="row border-bottom border-light mb-2">
+                            <div class="text-start col">
+                                <h4 class="fw-light eng">Blow Dry</h4>
+                                <h4 class="fw-light sp">Peinado</h4>
+                            </div>
+                            <h3 class="text-end col-auto fw-normal">
+                                 €15 to €30
+                            </h3>
+                        </div>
+                        <div class="row border-bottom border-light mb-2">
+                            <div class="text-start col">
+                                <h4 class="fw-light eng">Hair Up</h4>
+                                <h4 class="fw-light sp">Recogidos</h4>
+                            </div>
+                            <h3 class="text-end col-auto fw-normal">
+                                 from €40
+                            </h3>
+                        </div>
+                        <div class="row border-bottom border-light mb-2">
+                            <div class="text-start col">
+                                <h4 class="fw-light eng">Womens Cut</h4>
+                                <h4 class="fw-light sp">Corte Mujer</h4>
+                            </div>
+                            <h3 class="text-end col-auto fw-normal">
+                                 €18
+                            </h3>
+                        </div>
+                        <div class="row border-bottom border-light mb-2">
+                            <div class="text-start col">
+                                <h4 class="fw-light eng">Mens Cut</h4>
+                                <h4 class="fw-light sp">Corte Hombre</h4>
+                            </div>
+                            <h3 class="text-end col-auto fw-normal">
+                                 €15
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <div class="text-start col">
+                                <h4 class="fw-light eng">Childrens Cut</h4>
+                                <h4 class="fw-light sp">Corte Niño</h4>
+                            </div>
+                            <h3 class="text-end col-auto fw-normal">
+                                 €12
+                            </h3>
+                        </div>
+                    </div>
                 </div>
-                <div class=" col-4 col-md-2 mx-auto rounded-pill p-1 sp">
-                    Estilo <i class="bi bi-scissors"></i>
-                </div>
+
+            <hr class="d-md-none"/>
                 
+            <div class="card border-0 col-md-8 mx-auto" >
+                <div class="card-header c1 border-bottom border-light">
+                    <h3 class="text-start fs-2 eng">Colour <i class="bi bi-scissors"></i></h3>
+                    <h3 class="text-start sp">Color <i class="bi bi-scissors"></i></h3>
+                </div>
+                <div class="card-body c1">
+                   <div class="row border-bottom border-light mb-2">
+                    <div class="text-start col">
+                        <h4 class="fw-light eng">Roots</h4>
+                        <h4 class="fw-light sp">Raíz</h4>
+                    </div>
+                    <h3 class="text-end col-auto fw-normal">
+                         €30
+                    </h3>
+                </div>
+                <div class="row border-bottom border-light mb-2">
+                    <div class="text-start col">
+                        <h4 class="fw-light eng">Medium </h4>
+                        <h4 class="fw-light sp">Medio </h4>
+                    </div>
+                    <h3 class="text-end col-auto fw-normal">
+                         €28
+                    </h3>
+                </div> 
+                <div class="row border-bottom border-light mb-2">
+                    <div class="text-start col">
+                        <h4 class="fw-light eng">Long </h4>
+                        <h4 class="fw-light sp">Largo </h4>
+                    </div>
+                    <h3 class="text-end col-auto fw-normal">
+                         €32
+                    </h3>
+                </div> 
+                <div class="row border-bottom border-light mb-2">
+                    <div class="text-start col">
+                        <h4 class="fw-light eng">Contouring </h4>
+                        <h4 class="fw-light sp">Contorno </h4>
+                    </div>
+                    <h3 class="text-end col-auto fw-normal">
+                         €30
+                    </h3>
+                </div> 
+                <div class="row border-bottom border-light mb-2">
+                    <div class="text-start col">
+                        <h4 class="fw-light eng">Half </h4>
+                        <h4 class="fw-light sp">Medias </h4>
+                    </div>
+                    <h3 class="text-end col-auto fw-normal">
+                         €40
+                    </h3>
+                </div> 
+                <div class="row border-bottom border-light mb-2">
+                    <div class="text-start col">
+                        <h4 class="fw-light eng">Full </h4>
+                        <h4 class="fw-light sp">Mechas </h4>
+                    </div>
+                    <h3 class="text-end col-auto fw-normal">
+                         €65
+                    </h3>
+                </div> 
+                <div class="row border-bottom border-light mb-2">
+                    <div class="text-start col">
+                        <h4 class="fw-light eng">Balayage </h4>
+                        <h4 class="fw-light sp">Balayage </h4>
+                    </div>
+                    <h3 class="text-end col-auto fw-normal">
+                         €65
+                    </h3>
+                </div> 
+                <div class="row border-bottom border-light mb-2">
+                    <div class="text-start col">
+                        <h4 class="fw-light eng">Root </h4>
+                        <h4 class="fw-light sp">Decoloración </h4>
+                    </div>
+                    <h3 class="text-end col-auto fw-normal">
+                         €30
+                    </h3>
+                </div> 
+                <div class="row border-bottom border-light mb-2">
+                    <div class="text-start col">
+                        <h4 class="fw-light eng">Babylights </h4>
+                        <h4 class="fw-light sp">Babylights </h4>
+                    </div>
+                    <h3 class="text-end col-auto fw-normal">
+                         €65
+                    </h3>
+                </div> 
+                <div class="row border-bottom border-light mb-2">
+                    <div class="text-start col">
+                        <h4 class="fw-light eng">Tone </h4>
+                        <h4 class="fw-light sp">Matiz </h4>
+                    </div>
+                    <h3 class="text-end col-auto fw-normal">
+                         €15
+                    </h3>
+                </div> 
+                <div class="row border-bottom border-light mb-2">
+                    <div class="text-start col">
+                        <h4 class="fw-light eng">Olaplex </h4>
+                        <h4 class="fw-light sp">Olaplex </h4>
+                    </div>
+                    <h3 class="text-end col-auto fw-normal">
+                         €15
+                    </h3>
+                </div> 
             </div>
-            <div class="row row-cols-md-2 row-cols-1 mb-5">
-                <div class="col text-center justify-content-center">
-                    <div>
-                        <h3 class="eng">Blow Dry <span class="text-muted fw-light eng">- €15 - €30</span></h3>
-                        <h3 class="sp">Peinado <span class="text-muted fw-light sp">- €15 - €30</span></h3>
-                        <div class="text-muted mb-3 eng">Personalized Styling</div>
-                        <div class="text-muted mb-3 sp">Peinado personalizado</div>
-                    </div>
-                    <div>
-                        <h3 class="eng">Hair Up <span class="text-muted fw-light eng">- from €40</span></h3>
-                        <h3 class="sp">Recogidos <span class="text-muted fw-light sp">- desde €40</span></h3>
-                        <div class="text-muted mb-3 eng">Styled professionally for any occasion</div>
-                        <div class="text-muted mb-3 sp">Perfecto para ocasiones especiales</div>
-                    </div>
-                    <div>
-                        <h3 class="eng">Womens Cut <span class="text-muted fw-light eng">- €18</span></h3>
-                        <h3 class="sp">Corte mujer <span class="text-muted fw-light sp">- €18</span></h3>
-                        <div class="text-muted mb-3 eng">A simple haircut for women</div>
-                        <div class="text-muted mb-3 sp">Corte de pelo simple para mujeres</div>
-                    </div>
-                    
-                </div>
                 
-                <div class="col text-center">
-                    
-                    <div>
-                        <h3 class="eng">Mens cut <span class="text-muted fw-light eng">- €15</span></h3>
-                        <h3 class="sp">Corte caballero <span class="text-muted fw-light sp">- €15</span></h3>
-                        <div class="text-muted mb-3 eng">A simple haircut for men</div>
-                        <div class="text-muted mb-3 sp">Corte de pelo simple para hombres</div>
-                    </div>
-                    <div>
-                        <h3 class="eng">Childrens cut <span class="text-muted fw-light eng">- €12</span></h3>
-                        <h3 class="sp">Corte niño <span class="text-muted fw-light sp">- €12</span></h3>
-                        <div class="text-muted mb-3 eng">A simple haircut for children</div>
-                        <div class="text-muted mb-3 sp">Corte de pelo simple para niños</div>
-                    </div>
-                    
-                </div>
-                    
-            </div><hr class="d-md-none"/>
+
+
+            </div>
+
             <div class="display-5 text-center mb-2 p-2 rounded-3 ">
                 <div class="col-5 col-md-2 mx-auto rounded-pill p-1 eng">
                     Colour <i class="bi bi-brush"></i>
@@ -310,9 +452,6 @@
                         <div class="text-muted mb-3 eng">Complete Hightlights </div>
                         <div class="text-muted mb-3 sp">Mechas completas</div>
                     </div>
-                   
-                    
-                    
                 </div>
                 
                 <div class="col text-center">
@@ -347,8 +486,6 @@
                         <div class="text-muted mb-3 eng">A treatment to maintain the health of your hair during the process of colouring</div>
                         <div class="text-muted mb-3 sp">Tratamiento para cuidar la salud de tu cabello en el proceso de coloración</div>
                     </div>
-
-                    
                 </div>
                 
             </div><hr class="d-md-none"/>
@@ -484,13 +621,16 @@
                 </div>
             </div>
         </div>
+
         <br>
         <br>
         <br>
         <br>
         <br>
         <br>
+
     </section>
+
     <section id="foot">
         <div class="container-fluid p-0">
             <footer class="footer bg-light ">
