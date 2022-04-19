@@ -550,8 +550,44 @@
 
 
     <section id="about">
-        <div class="container-xl">
+        <div class="container-xl mt-5">
+            <div class="row g-3">
+                <div class="col-7">
+                    <div class="card p-3">
+                        <span class="display-5"><i class="bi bi-chat-left-text"></i></span>
+                        <form>
+                            <div class="input-group my-3">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                                <input required type="text" class="form-control" placeholder="Email (Required)" aria-label="Email" aria-describedby="basic-addon1">
+                            </div>
+                            <select class="form-select" aria-label="service select">
+                                <option selected disabled valeu="">Service (Optional)</option>
+                                <option value="1">Cut</option>
+                                <option value="2">Color</option>
+                                <option value="3">Treatment</option>
+                              </select>
+                              <div class="my-3">
+                                <label for="message" class="form-label">Message (Optional)</label>
+                                <textarea class="form-control" id="message" rows="3"></textarea>
+                              </div>
+                              <div>
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                              </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 p-3" style="background: rgb(234,216,216);
+                    background: linear-gradient(0deg, rgba(234,216,216,1) 15%, rgba(225,198,182,0.6026785714285714) 42%);">
+                        <span class="fs-3 border-bottom border-secondary">Committed to Quality Service</span>
+                        <span class="p fs-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, accusantium incidunt quasi ad doloribus facilis? Saepe, hic dolore laboriosam ducimus quidem ipsam officia numquam quasi commodi sequi nemo consequuntur vitae.</span>
+                    </div>
+                </div>
+            </div>
             
+
+
+
 
 
 
@@ -565,7 +601,6 @@
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
                             <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
-
                         <div class="input-group mb-3">
                             <select class="form-select" id="inputGroupSelect02">
                               <option selected>Choose type of service (optional) </option>
